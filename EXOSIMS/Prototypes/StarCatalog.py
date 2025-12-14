@@ -63,12 +63,6 @@ class StarCatalog(object):
         coords (astropy.coordinates.SkyCoord):
             SkyCoord object (ICRS frame) containing right ascension, declination, and
             distance to star in units of deg, deg, and pc
-        pmra (~astropy.units.Quantity(~numpy.ndarray(float))):
-            Proper motion in right ascension in units of mas/year
-        pmdec (~astropy.units.Quantity(~numpy.ndarray(float))):
-            Proper motion in declination in units of mas/year
-        rv (~astropy.units.Quantity(~numpy.ndarray(float))):
-            Radial velocity in units of km/s
         cachedir (str):
             Path to cache directory
 
@@ -138,9 +132,6 @@ class StarCatalog(object):
             "parx",
             "dist",
             "coords",
-            "pmra",
-            "pmdec",
-            "rv",
             "Umag",
             "Bmag",
             "Vmag",
@@ -168,3 +159,4 @@ class StarCatalog(object):
             print("%s: %r" % (att, getattr(self, att)))
 
         return "Star Catalog class object attributes"
+
